@@ -7,7 +7,7 @@ export default function Hero() {
       {/* Profile Photo */}
       <div className="mb-6">
         <Image
-          src="/profile.png"
+          src="assets/pragyan.jpg"
           alt="Pragyan Dhar"
           width={140}
           height={140}

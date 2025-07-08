@@ -1,0 +1,209 @@
+/* White Spark Burst Effect */
+.white-spark {
+  position: fixed;
+  left: 0; top: 0;
+  width: 3px;
+  height: 22px;
+  background: linear-gradient(180deg, #fff 0%, #fff 80%, transparent 100%);
+  border-radius: 2px;
+  pointer-events: none;
+  z-index: 99999;
+  transform: translate(-50%, -50%) rotate(var(--angle, 0)) scaleY(0.7);
+  opacity: 1;
+  animation: white-spark-burst 0.4s cubic-bezier(0.77,0,0.175,1) both;
+}
+
+@keyframes white-spark-burst {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(var(--angle, 0)) scaleY(0.2);
+  }
+  70% {
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(var(--angle, 0)) scaleY(1.2) translateY(calc(-1 * var(--distance, 40px)));
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) rotate(var(--angle, 0)) scaleY(1.2) translateY(calc(-1 * var(--distance, 40px)));
+  }
+}
+
+/* Animated Background Layer */
+#bg-animated {
+  position: fixed;
+  left: 0; top: 0; width: 100vw; height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at var(--bg-x,50%) var(--bg-y,50%), #5D3587 0%, #18122B 80%);
+  transition: background 0.18s cubic-bezier(0.77,0,0.175,1);
+  opacity: 0.7;
+}
+/* Spark Effect */
+.spark-effect {
+  position: fixed;
+  width: 32px;
+  height: 32px;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(circle, #F99417 0%, #A3FFD6 60%, transparent 100%);
+  box-shadow: 0 0 24px 8px #F99417, 0 0 48px 16px #A3FFD6;
+  animation: spark-pop 0.7s cubic-bezier(0.77,0,0.175,1) both;
+  z-index: 99999;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+@keyframes spark-pop {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0.5) rotate(-10deg);
+  }
+  60% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.2) rotate(8deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.7) rotate(-12deg);
+  }
+}
+/*
+  Meraki Portfolio Animations
+  Advanced, bold, and punky. Uses custom CSS and GSAP hooks.
+*/
+
+/* Fade In Up */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 1s cubic-bezier(0.77,0,0.175,1) both;
+}
+
+/* Neon Glow Pulse */
+@keyframes neonPulse {
+  0%, 100% {
+    box-shadow: 0 0 16px #A3FFD6, 0 0 32px #5D3587;
+  }
+  50% {
+    box-shadow: 0 0 32px #F99417, 0 0 64px #A3FFD6;
+  }
+}
+
+.neon-pulse {
+  animation: neonPulse 1.5s infinite alternate;
+}
+
+/* Slide In Left */
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-60px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+.slide-in-left {
+  animation: slideInLeft 1.1s cubic-bezier(0.77,0,0.175,1) both;
+}
+
+/* Slide In Right */
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(60px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+.slide-in-right {
+  animation: slideInRight 1.1s cubic-bezier(0.77,0,0.175,1) both;
+}
+
+/* Pop In */
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.7) rotate(-8deg);
+  }
+  80% {
+    opacity: 1;
+    transform: scale(1.05) rotate(2deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+.pop-in {
+  animation: popIn 0.7s cubic-bezier(0.77,0,0.175,1) both;
+}
+
+/* Parallax Layer (for JS) */
+.parallax {
+  will-change: transform;
+}
+
+/* Micro-interaction: Button Wiggle */
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-2deg) scale(1); }
+  20% { transform: rotate(2deg) scale(1.05); }
+  40% { transform: rotate(-3deg) scale(1.08); }
+  60% { transform: rotate(3deg) scale(1.05); }
+  80% { transform: rotate(-1deg) scale(1.02); }
+}
+
+.wiggle:hover {
+  animation: wiggle 0.5s;
+}
+
+/* Modal Pop */
+@keyframes modalPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.7) translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.modal-content.pop-in {
+  animation: modalPop 0.6s cubic-bezier(0.77,0,0.175,1) both;
+}
+
+/* Brutalist Underline */
+.brutal-underline {
+  position: relative;
+  display: inline-block;
+}
+.brutal-underline::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; bottom: -4px;
+  height: 6px;
+  background: linear-gradient(90deg, #A3FFD6 0%, #F99417 100%);
+  border-radius: 3px;
+  z-index: -1;
+  opacity: 0.7;
+}
+
+/* Utility: Hide */
+.hide {
+  display: none !important;
+}

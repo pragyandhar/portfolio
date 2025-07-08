@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pragyan (Chandra) Dhar | Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+</head>
+<body class="dark-theme">
+  <nav class="navbar">
+    <div class="logo">Pragyan (Chandra) Dhar</div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="resume.html">Resume</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <h1 class="big-name">Pragyan (Chandra) Dhar</h1>
+        <p class="tagline typewriter">
+          <span id="typewriter-text"></span>
+        </p>
+        <p class="about">I turn data into stories and ideas into impact. Welcome to my world of analytics, creativity, and relentless curiosity.</p>
+        <div class="contact-icons">
+          <a href="https://www.instagram.com/pragyan_dhar/" target="_blank" class="icon ig" title="Instagram"><img src="assets/images/instagram.png" alt="Instagram"></a>
+          <a href="https://github.com/pragyandhar" target="_blank" class="icon gh" title="GitHub"><img src="assets/images/github.png" alt="GitHub"></a>
+          <a href="https://www.linkedin.com/in/pragyan-dhar-b98696313/" target="_blank" class="icon li" title="LinkedIn"><img src="assets/images/linkedin.png" alt="LinkedIn"></a>
+          <a href="mailto:pragyandhar@gmail.com" class="icon gm" title="Gmail"><img src="assets/images/gmail.png" alt="Gmail"></a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <img src="assets/images/Pragyan.jpg" alt="Pragyan (Chandra) Dhar" class="profile-pic">
+      </div>
+    </section>
+  </main>
+
+  <script src="js/gsap.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/effects.js"></script>
+  <script>
+    // Typewriter effect for tagline
+    const roles = [
+      "Data Analyst",
+      "Dashboard Wizard",
+      "SQL Angel",
+      "Excel Master",
+      "Power BI Expert",
+      "Awesome Communicator",
+      "Good Leader",
+      "Amazing Team Spirit"
+    ];
+    let roleIndex = 0, charIndex = 0, isDeleting = false;
+    const typewriter = document.getElementById('typewriter-text');
+    function type() {
+      if (!typewriter) return;
+      const current = roles[roleIndex];
+      if (isDeleting) {
+        typewriter.textContent = current.substring(0, charIndex--);
+        if (charIndex < 0) {
+          isDeleting = false;
+          roleIndex = (roleIndex + 1) % roles.length;
+          setTimeout(type, 600);
+        } else {
+          setTimeout(type, 40);
+        }
+      } else {
+        typewriter.textContent = current.substring(0, charIndex++);
+        if (charIndex > current.length) {
+          isDeleting = true;
+          setTimeout(type, 1200);
+        } else {
+          setTimeout(type, 90);
+        }
+      }
+    }
+    document.addEventListener('DOMContentLoaded', type);
+  </script>
+</body>
+</html>

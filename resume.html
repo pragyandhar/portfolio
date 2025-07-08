@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume | Your Name</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+</head>
+<body class="dark-theme">
+  <nav class="navbar">
+    <div class="logo">Pragyan (Chandra) Dhar</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="resume.html" class="active">Resume</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="resume-section">
+      <h1 class="section-title">My Resume</h1>
+      <div class="resume-domains">
+        <!-- Data Analytics Resume -->
+        <div class="resume-card expanded">
+          <div class="resume-header">
+            <span class="resume-domain">Data Analytics</span>
+            <span class="resume-toggle">▼</span>
+          </div>
+          <div class="resume-content">
+            <embed src="assets/resume/data-analytics-resume.pdf" type="application/pdf" class="resume-pdf" width="100%" height="500px" />
+            <a href="assets/resume/data-analytics-resume.pdf" download class="download-resume">Download PDF</a>
+          </div>
+        </div>
+        <!-- Future Domains Placeholders -->
+        <div class="resume-card coming-soon">
+          <div class="resume-header">
+            <span class="resume-domain">App Development</span>
+            <span class="soon-label">Coming Soon</span>
+          </div>
+        </div>
+        <div class="resume-card coming-soon">
+          <div class="resume-header">
+            <span class="resume-domain">Video Editing</span>
+            <span class="soon-label">Coming Soon</span>
+          </div>
+        </div>
+        <div class="resume-card coming-soon">
+          <div class="resume-header">
+            <span class="resume-domain">Photo Editing</span>
+            <span class="soon-label">Coming Soon</span>
+          </div>
+        </div>
+        <div class="resume-card coming-soon">
+          <div class="resume-header">
+            <span class="resume-domain">Videography</span>
+            <span class="soon-label">Coming Soon</span>
+          </div>
+        </div>
+        <div class="resume-card coming-soon">
+          <div class="resume-header">
+            <span class="resume-domain">AI Engineer</span>
+            <span class="soon-label">Coming Soon</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/gsap.min.js"></script>
+  <script src="js/resume.js"></script>
+  <script src="js/effects.js"></script>
+</body>
+</html>

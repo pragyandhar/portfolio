@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills | Your Name</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+</head>
+<body class="dark-theme">
+  <nav class="navbar">
+    <div class="logo">Pragyan (Chandra) Dhar</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="skills.html" class="active">Skills</a></li>
+      <li><a href="resume.html">Resume</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="skills-section">
+      <h1 class="section-title">My Skills & Domains</h1>
+      <div class="domains-list">
+        <!-- Data Analytics Domain -->
+        <div class="domain-card">
+          <div class="domain-header dropdown-toggle">
+            <span class="domain-title">Data Analytics</span>
+            <span class="domain-toggle">▼</span>
+          </div>
+          <div class="domain-content" style="display:none;">
+            <div class="skills-list">
+              <div class="skill-item">
+                <div class="skill-header">Excel <span class="skill-toggle">▼</span></div>
+                <ul class="exercises-list">
+                  <li><a href="#" class="exercise-link" data-question="Data Cleaning" data-video="assets/videos/excel-data-cleaning.mp4">Data Cleaning</a></li>
+                  <li><a href="#" class="exercise-link" data-question="Pivot Tables" data-video="assets/videos/excel-pivot-tables.mp4">Pivot Tables</a></li>
+                  <li><a href="#" class="exercise-link" data-question="Visualization" data-video="assets/videos/excel-visualization.mp4">Visualization</a></li>
+                </ul>
+              </div>
+              <div class="skill-item">
+                <div class="skill-header">Power BI <span class="skill-toggle">▼</span></div>
+                <ul class="exercises-list">
+                  <li><a href="#" class="exercise-link" data-question="Dashboard Design" data-video="assets/videos/powerbi-dashboard-design.mp4">Dashboard Design</a></li>
+                  <li><a href="#" class="exercise-link" data-question="DAX Formulas" data-video="assets/videos/powerbi-dax-formulas.mp4">DAX Formulas</a></li>
+                  <li><a href="#" class="exercise-link" data-question="Data Modeling" data-video="assets/videos/powerbi-data-modeling.mp4">Data Modeling</a></li>
+                </ul>
+              </div>
+              <div class="skill-item">
+                <div class="skill-header">SQL <span class="skill-toggle">▼</span></div>
+                <ul class="exercises-list">
+                  <li><a href="#" class="exercise-link" data-question="Joins & Aggregations" data-video="assets/videos/sql-joins.mp4">Joins & Aggregations</a></li>
+                  <li><a href="#" class="exercise-link" data-question="Subqueries" data-video="assets/videos/sql-subqueries.mp4">Subqueries</a></li>
+                  <li><a href="#" class="exercise-link" data-question="Window Functions" data-video="assets/videos/sql-window-functions.mp4">Window Functions</a></li>
+                </ul>
+              </div>
+              <div class="skill-item">
+                <div class="skill-header">Python <span class="skill-toggle">▼</span></div>
+                <ul class="exercises-list">
+                  <li><a href="#" class="exercise-link" data-question="Pandas Analysis" data-video="assets/videos/python-pandas-analysis.mp4">Pandas Analysis</a></li>
+                  <li><a href="#" class="exercise-link" data-question="Data Visualization" data-video="assets/videos/python-data-visualization.mp4">Data Visualization</a></li>
+                  <li><a href="#" class="exercise-link" data-question="Automation Scripts" data-video="assets/videos/python-automation-scripts.mp4">Automation Scripts</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="projects-section">
+              <h2>Projects (<span class="project-count">3</span>)</h2>
+              <div class="projects-list">
+                <div class="project-card" data-project="1">
+                  <span class="project-title">Sales Dashboard</span>
+                  <span style="flex:1"></span>
+                  <button class="view-project">View</button>
+                </div>
+                <div class="project-card" data-project="2">
+                  <span class="project-title">Customer Segmentation</span>
+                  <span style="flex:1"></span>
+                  <button class="view-project">View</button>
+                </div>
+                <div class="project-card" data-project="3">
+                  <span class="project-title">Survey Data Insights</span>
+                  <span style="flex:1"></span>
+                  <button class="view-project">View</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- AI Engineer Placeholder (moved just after Data Analytics) -->
+        <div class="domain-card coming-soon">
+          <div class="domain-header">
+            <span class="domain-title">AI Engineer</span>
+            <span class="soon-label">Coming Soon</span>
+          </div>
+        </div>
+        <!-- Future Domains Placeholders -->
+        <div class="domain-card coming-soon">
+          <div class="domain-header">
+            <span class="domain-title">App Development</span>
+            <span class="soon-label">Coming Soon</span>
+          </div>
+        </div>
+        <div class="domain-card coming-soon">
+          <div class="domain-header">
+            <span class="domain-title">Video Editing</span>
+            <span class="soon-label">Coming Soon</span>
+          </div>
+        </div>
+        <div class="domain-card coming-soon">
+          <div class="domain-header">
+            <span class="domain-title">Photo Editing</span>
+            <span class="soon-label">Coming Soon</span>
+          </div>
+        </div>
+        <div class="domain-card coming-soon">
+          <div class="domain-header">
+            <span class="domain-title">Videography</span>
+            <span class="soon-label">Coming Soon</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Popup Modal -->
+    <div class="project-modal" id="projectModal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2 class="modal-title">Project Title</h2>
+        <p class="modal-desc">Problem statement and solution will appear here.</p>
+        <img src="assets/images/project-placeholder.png" alt="Project Image" class="modal-img">
+        <video controls class="modal-video">
+          <source src="assets/videos/project-demo.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <a href="#" class="modal-live" target="_blank">Live Version</a>
+      </div>
+    </div>
+    <!-- Exercise Popup Modal -->
+    <div class="project-modal" id="exerciseModal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2 class="modal-title">Exercise Title</h2>
+        <p class="modal-desc">Question will appear here.</p>
+        <video controls class="modal-video">
+          <source src="" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/gsap.min.js"></script>
+  <script src="js/skills.js"></script>
+  <script src="js/effects.js"></script>
+</body>
+</html>

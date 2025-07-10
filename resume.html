@@ -29,41 +29,18 @@
             <span class="resume-toggle">▼</span>
           </div>
           <div class="resume-content">
-            <embed src="assets/resume/data-analytics-resume.pdf" type="application/pdf" class="resume-pdf" width="100%" height="500px" />
-            <a href="assets/resume/data-analytics-resume.pdf" download class="download-resume">Download PDF</a>
+            <button class="view-resume-btn">VIEW RESUME</button>
           </div>
+    <!-- Resume Modal Popup -->
+    <div class="resume-modal" id="resumeModal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <embed src="assets/resume/pragyan_resume.pdf" type="application/pdf" class="resume-pdf-modal" width="100%" height="90%" />
+        <a href="assets/resume/pragyan_resume.pdf" download class="download-resume">Download PDF</a>
+      </div>
+    </div>
         </div>
-        <!-- Future Domains Placeholders -->
-        <div class="resume-card coming-soon">
-          <div class="resume-header">
-            <span class="resume-domain">App Development</span>
-            <span class="soon-label">Coming Soon</span>
-          </div>
-        </div>
-        <div class="resume-card coming-soon">
-          <div class="resume-header">
-            <span class="resume-domain">Video Editing</span>
-            <span class="soon-label">Coming Soon</span>
-          </div>
-        </div>
-        <div class="resume-card coming-soon">
-          <div class="resume-header">
-            <span class="resume-domain">Photo Editing</span>
-            <span class="soon-label">Coming Soon</span>
-          </div>
-        </div>
-        <div class="resume-card coming-soon">
-          <div class="resume-header">
-            <span class="resume-domain">Videography</span>
-            <span class="soon-label">Coming Soon</span>
-          </div>
-        </div>
-        <div class="resume-card coming-soon">
-          <div class="resume-header">
-            <span class="resume-domain">AI Engineer</span>
-            <span class="soon-label">Coming Soon</span>
-          </div>
-        </div>
+        <!-- Future Domains Placeholders removed -->
       </div>
     </section>
   </main>
@@ -71,5 +48,27 @@
   <script src="js/gsap.min.js"></script>
   <script src="js/resume.js"></script>
   <script src="js/effects.js"></script>
+  <script>
+    // Resume Modal Logic
+    document.addEventListener('DOMContentLoaded', function() {
+      const viewBtn = document.querySelector('.view-resume-btn');
+      const modal = document.getElementById('resumeModal');
+      const closeModal = modal?.querySelector('.close-modal');
+      viewBtn?.addEventListener('click', function() {
+        modal.classList.add('active');
+        modal.querySelector('.modal-content').classList.add('pop-in');
+      });
+      closeModal?.addEventListener('click', function() {
+        modal.classList.remove('active');
+        modal.querySelector('.modal-content').classList.remove('pop-in');
+      });
+      modal?.addEventListener('click', function(e) {
+        if (e.target === modal) {
+          modal.classList.remove('active');
+          modal.querySelector('.modal-content').classList.remove('pop-in');
+        }
+      });
+    });
+  </script>
 </body>
 </html>

@@ -267,15 +267,16 @@ body.resume-modal-open .resume-domains {
   Font: Space Grotesk (Google Fonts)
 */
 
-body.dark-theme {
-  background: linear-gradient(135deg, #18122B 0%, #393053 100%);
-  color: #F5F5F5;
+body, body.light-theme {
+  background: linear-gradient(135deg, #f8fff8 0%, #e6f9e6 100%);
+  color: #181818;
   font-family: 'Space Grotesk', Arial, sans-serif;
   min-height: 100vh;
   margin: 0;
   padding: 0;
   letter-spacing: 0.01em;
   overflow-x: hidden;
+  transition: background 0.4s, color 0.4s;
 }
 
 /* Navbar */
@@ -284,8 +285,8 @@ body.dark-theme {
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 3vw;
-  background: rgba(24, 18, 43, 0.95);
-  box-shadow: 0 2px 24px 0 #5D3587;
+  background: #fff;
+  box-shadow: 0 2px 24px 0 #b2f5b2;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -293,9 +294,9 @@ body.dark-theme {
 .logo {
   font-size: 2.2rem;
   font-weight: 700;
-  color: #A3FFD6;
+  color: #1e7f3a;
   letter-spacing: 0.1em;
-  text-shadow: 0 2px 12px #5D3587;
+  text-shadow: 0 2px 12px #b2f5b2;
 }
 .nav-links {
   list-style: none;
@@ -305,7 +306,7 @@ body.dark-theme {
   padding: 0;
 }
 .nav-links a {
-  color: #F5F5F5;
+  color: #1e7f3a;
   text-decoration: none;
   font-size: 1.1rem;
   font-weight: 600;
@@ -314,8 +315,8 @@ body.dark-theme {
   transition: background 0.2s, color 0.2s;
 }
 .nav-links a.active, .nav-links a:hover {
-  background: linear-gradient(90deg, #A3FFD6 0%, #5D3587 100%);
-  color: #18122B;
+  background: linear-gradient(90deg, #b2f5b2 0%, #1e7f3a 100%);
+  color: #fff;
 }
 
 /* Hero Section */
@@ -327,6 +328,9 @@ body.dark-theme {
   min-height: 80vh;
   padding: 4rem 2vw 2rem 2vw;
   gap: 4vw;
+  background: linear-gradient(120deg, #e6f9e6 60%, #fff 100%);
+  border-radius: 2.5rem;
+  box-shadow: 0 4px 32px #b2f5b2;
 }
 .hero-text {
   flex: 1 1 350px;
@@ -336,21 +340,21 @@ body.dark-theme {
 .big-name {
   font-size: 3.5rem;
   font-weight: 900;
-  color: #A3FFD6;
+  color: #1e7f3a;
   margin: 0 0 0.5rem 0;
   letter-spacing: 0.08em;
-  text-shadow: 0 4px 32px #5D3587;
+  text-shadow: 0 4px 32px #b2f5b2;
 }
 .tagline {
   font-size: 1.3rem;
-  color: #F99417;
+  color: #1e7f3a;
   margin-bottom: 1.2rem;
   font-weight: 600;
   letter-spacing: 0.04em;
 }
 .about {
   font-size: 1.1rem;
-  color: #F5F5F5;
+  color: #222;
   margin-bottom: 2rem;
   line-height: 1.6;
 }
@@ -367,11 +371,11 @@ body.dark-theme {
   background: #393053;
   border-radius: 50%;
   box-shadow: 0 2px 12px #5D3587;
-  transition: background 0.2s, transform 0.2s;
+  transition: background 0.2s, transform 0.3s cubic-bezier(.68,-0.55,.27,1.55);
 }
 .contact-icons .icon:hover {
-  background: linear-gradient(135deg, #A3FFD6 0%, #F99417 100%);
-  transform: scale(1.15) rotate(-8deg);
+  background: linear-gradient(135deg, #34c759 0%, #1a3d1a 100%);
+  transform: scale(1.25) rotate(-18deg);
 }
 .contact-icons img {
   width: 1.3rem;
@@ -722,4 +726,229 @@ body.dark-theme {
   .modal-content {
     padding: 1.2rem 0.5rem;
   }
+}
+
+/* === Green/Black/White Light Mode Overrides for Skills & Resume Pages === */
+.skills-section, .resume-section {
+  background: linear-gradient(135deg, #e8fff3 0%, #e6f5e9 100%) !important;
+}
+.domain-card, .domain-card.expanded, .resume-card, .resume-card.expanded {
+  background: #fff !important;
+  color: #1a3d1a !important;
+  box-shadow: 0 4px 32px #b6e7c9 !important;
+  border-radius: 1.5rem !important;
+  border: 2.5px solid #b6e7c9 !important;
+}
+.domain-card.expanded, .resume-card.expanded {
+  background: #e8fff3 !important;
+  border: 2.5px solid #34c759 !important;
+  box-shadow: 0 8px 48px #b6e7c9 !important;
+}
+.domain-header, .resume-header {
+  color: #218c3a !important;
+}
+.domain-toggle, .resume-toggle {
+  color: #34c759 !important;
+}
+.soon-label, .domain-card .coming-soon {
+  background: #e6f5e9 !important;
+  color: #218c3a !important;
+  border: 1.5px solid #b6e7c9 !important;
+  opacity: 0.9 !important;
+}
+/* Modal Styles */
+.resume-modal, .project-modal {
+  background: rgba(232,255,243,0.98) !important;
+}
+.resume-modal .modal-content, .project-modal .modal-content {
+  background: #fff !important;
+  color: #1a3d1a !important;
+  border-radius: 1.5rem !important;
+  box-shadow: 0 8px 48px #b6e7c9, 0 0 0 8px #e8fff3 !important;
+  border: 4px solid #34c759 !important;
+}
+.resume-modal .close-modal, .project-modal .close-modal, .resume-modal .close, .resume-modal .close-modal {
+  color: #fff !important;
+  background: #34c759 !important;
+  border: 2px solid #34c759 !important;
+}
+.resume-modal .close-modal:hover, .project-modal .close-modal:hover, .resume-modal .close:hover {
+  color: #fff !important;
+  background: #218c3a !important;
+  border-color: #218c3a !important;
+}
+.resume-pdf-modal, .modal-video {
+  background: #e8fff3 !important;
+}
+.download-resume, .view-resume-btn, .modal-live, .view-project {
+  background: linear-gradient(90deg, #34c759 0%, #b6e7c9 100%) !important;
+  color: #1a3d1a !important;
+}
+.download-resume:hover, .view-resume-btn:hover, .modal-live:hover, .view-project:hover {
+  background: #218c3a !important;
+  color: #fff !important;
+}
+/* Section Titles */
+.section-title {
+  color: #218c3a !important;
+  text-shadow: 0 2px 16px #b6e7c9 !important;
+}
+
+/* === Force override for Skills & Resume page backgrounds === */
+body.skills-page, body.resume-page, body[data-page="skills"], body[data-page="resume"] {
+  background: linear-gradient(135deg, #e8fff3 0%, #e6f5e9 100%) !important;
+}
+
+/* === Light Mode Body Background (no !important, so dark mode can override) === */
+body.skills-page:not(.dark-mode), body.resume-page:not(.dark-mode), body[data-page="skills"]:not(.dark-mode), body[data-page="resume"]:not(.dark-mode) {
+  background: linear-gradient(135deg, #e8fff3 0%, #e6f5e9 100%);
+}
+
+/* === Skill Domain Header Contrast Fix === */
+.skill-domain-header, .skills-list .skill-header, .skills-list .domain-title {
+  color: #218c3a !important;
+  font-weight: 700 !important;
+  opacity: 1 !important;
+  text-shadow: 0 1px 8px #b6e7c933, 0 0px 0px #fff;
+}
+
+/* === Animated Dark Mode Toggle Button === */
+.dark-mode-toggle {
+  position: fixed;
+  bottom: 2.2rem;
+  right: 2.2rem;
+  z-index: 9999;
+  background: linear-gradient(90deg, #34c759 0%, #1a3d1a 100%);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  box-shadow: 0 4px 24px #b6e7c9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+  outline: none;
+  animation: pop-in 0.7s cubic-bezier(.68,-0.55,.27,1.55);
+}
+.dark-mode-toggle:hover {
+  background: linear-gradient(90deg, #1a3d1a 0%, #34c759 100%);
+  transform: scale(1.18) rotate(18deg);
+  box-shadow: 0 8px 32px #218c3a;
+}
+@keyframes pop-in {
+  0% { transform: scale(0.2) rotate(-90deg); opacity: 0; }
+  80% { transform: scale(1.15) rotate(10deg); opacity: 1; }
+  100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+
+/* === Update dark mode selectors for full coverage === */
+html.dark-mode, body.dark-mode {
+  background: linear-gradient(135deg, #181818 0%, #2d0036 100%) !important;
+  color: #e6d6ff !important;
+}
+html.dark-mode .domain-card, html.dark-mode .domain-card.expanded,
+html.dark-mode .resume-card, html.dark-mode .resume-card.expanded,
+body.dark-mode .domain-card, body.dark-mode .domain-card.expanded,
+body.dark-mode .resume-card, body.dark-mode .resume-card.expanded {
+  background: #181818 !important;
+  color: #ff3c28 !important;
+  border-color: #ff3c28 !important;
+  box-shadow: 0 4px 32px #a259ff !important;
+}
+html.dark-mode .skills-section, html.dark-mode .resume-section,
+body.dark-mode .skills-section, body.dark-mode .resume-section {
+  background: linear-gradient(135deg, #2d0036 0%, #181818 100%) !important;
+}
+html.dark-mode .section-title,
+html.dark-mode .domain-header, html.dark-mode .resume-header,
+body.dark-mode .section-title,
+body.dark-mode .domain-header, body.dark-mode .resume-header {
+  color: #ff3c28 !important;
+  text-shadow: 0 2px 16px #a259ff !important;
+}
+html.dark-mode .soon-label, html.dark-mode .domain-card .coming-soon,
+body.dark-mode .soon-label, body.dark-mode .domain-card .coming-soon {
+  background: #2d0036 !important;
+  color: #e6d6ff !important;
+  border-color: #a259ff !important;
+}
+html.dark-mode .resume-modal .modal-content, html.dark-mode .project-modal .modal-content,
+body.dark-mode .resume-modal .modal-content, body.dark-mode .project-modal .modal-content {
+  background: #181818 !important;
+  color: #e6d6ff !important;
+  border-color: #ff3c28 !important;
+}
+html.dark-mode .resume-modal, html.dark-mode .project-modal,
+body.dark-mode .resume-modal, body.dark-mode .project-modal {
+  background: rgba(24,24,24,0.98) !important;
+}
+html.dark-mode .download-resume, html.dark-mode .view-resume-btn, html.dark-mode .modal-live, html.dark-mode .view-project,
+body.dark-mode .download-resume, body.dark-mode .view-resume-btn, body.dark-mode .modal-live, body.dark-mode .view-project {
+  background: linear-gradient(90deg, #ff3c28 0%, #a259ff 100%) !important;
+  color: #fff !important;
+}
+html.dark-mode .download-resume:hover, html.dark-mode .view-resume-btn:hover, html.dark-mode .modal-live:hover, html.dark-mode .view-project:hover,
+body.dark-mode .download-resume:hover, body.dark-mode .view-resume-btn:hover, body.dark-mode .modal-live:hover, body.dark-mode .view-project:hover {
+  background: #a259ff !important;
+  color: #ff3c28 !important;
+}
+html.dark-mode .contact-icons .icon,
+body.dark-mode .contact-icons .icon {
+  background: #181818 !important;
+}
+html.dark-mode .contact-icons .icon:hover,
+body.dark-mode .contact-icons .icon:hover {
+  background: linear-gradient(135deg, #ff3c28 0%, #a259ff 100%) !important;
+}
+html.dark-mode .dark-mode-toggle,
+body.dark-mode .dark-mode-toggle {
+  background: linear-gradient(90deg, #ff3c28 0%, #a259ff 100%) !important;
+  color: #fff !important;
+}
+html.dark-mode .dark-mode-toggle:hover,
+body.dark_mode .dark-mode-toggle:hover {
+  background: linear-gradient(90deg, #a259ff 0%, #ff3c28 100%) !important;
+}
+/* === Full Dark Mode Coverage: Navbar, Text, Headings === */
+html.dark-mode .navbar, body.dark-mode .navbar {
+  background: #181818 !important;
+  box-shadow: 0 2px 24px 0 #a259ff !important;
+}
+html.dark-mode .logo, body.dark-mode .logo {
+  color: #ff3c28 !important;
+  text-shadow: 0 2px 12px #a259ff !important;
+}
+html.dark-mode .nav-links a, body.dark-mode .nav-links a {
+  color: #e6d6ff !important;
+  background: transparent !important;
+}
+html.dark-mode .nav-links a.active, html.dark-mode .nav-links a:hover,
+body.dark-mode .nav-links a.active, body.dark-mode .nav-links a:hover {
+  background: linear-gradient(90deg, #a259ff 0%, #ff3c28 100%) !important;
+  color: #181818 !important;
+}
+html.dark-mode h1, html.dark-mode h2, html.dark-mode h3, html.dark-mode h4, html.dark-mode h5, html.dark-mode h6,
+body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5, body.dark-mode h6 {
+  color: #ff3c28 !important;
+  text-shadow: 0 2px 12px #a259ff !important;
+}
+html.dark-mode, body.dark-mode {
+  color: #e6d6ff !important;
+}
+html.dark-mode .about, body.dark-mode .about {
+  color: #e6d6ff !important;
+}
+html.dark-mode .big-name, body.dark_mode .big-name {
+  color: #ff3c28 !important;
+  text-shadow: 0 4px 32px #a259ff !important;
+}
+
+/* === Dark Mode Hero Section Background === */
+html.dark-mode .hero, body.dark-mode .hero {
+  background: linear-gradient(120deg, #181818 60%, #2d0036 100%) !important;
+  box-shadow: 0 4px 32px #a259ff !important;
 }

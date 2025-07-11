@@ -1,6 +1,5 @@
 // effects.js
 // 1. Spark on click
-// 2. Background movement on mouse move
 
 document.addEventListener('DOMContentLoaded', () => {
   // --- White Spark Burst on Click ---
@@ -18,21 +17,5 @@ document.addEventListener('DOMContentLoaded', () => {
       document.body.appendChild(spark);
       setTimeout(() => spark.remove(), 400);
     }
-  });
-
-  // --- Dynamic Background Movement ---
-  // Add a background layer if not present
-  let bgLayer = document.getElementById('bg-animated');
-  if (!bgLayer) {
-    bgLayer = document.createElement('div');
-    bgLayer.id = 'bg-animated';
-    document.body.prepend(bgLayer);
-  }
-  // Animate background gradient position
-  document.addEventListener('mousemove', function(e) {
-    const x = e.clientX / window.innerWidth;
-    const y = e.clientY / window.innerHeight;
-    bgLayer.style.setProperty('--bg-x', `${x * 100}%`);
-    bgLayer.style.setProperty('--bg-y', `${y * 100}%`);
   });
 });

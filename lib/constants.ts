@@ -182,42 +182,6 @@ export const PROJECTS_DATA = [
     },
 
     {
-        id: "bol-ai",
-        title: "Bol AI Cognitive Intelligence Framework",
-        shortTitle: "Bol AI",
-        tagline:
-            "Modular voice-controlled AI assistant with 40+ commands.",
-
-        category: "Automation · Voice Interface",
-        accent: "violet" as const,
-        github: undefined as string | undefined,
-
-        metrics: [
-            { value: "40+", label: "Voice commands" },
-            { value: "30+", label: "Command handlers" },
-            { value: "2-way", label: "Voice interface" },
-        ],
-
-        tech: [
-            "Python",
-            "SpeechRecognition",
-            "PyAutoGUI",
-            "pyttsx3",
-            "Multithreading",
-        ],
-
-        highlights: [
-            "30+ voice command handlers",
-            "Windows system automation",
-            "Bidirectional voice interface",
-            "Contextual greeting engine",
-            "Productivity automation features",
-        ],
-
-        featured: false,
-    },
-
-    {
         id: "student-performance",
         title: "Student Performance Prediction System",
         shortTitle: "Student Performance",
@@ -327,7 +291,7 @@ export const EXTRA_DATA = [
 /** Headline figures for the hero. */
 export const HERO_STATS = [
     { value: "8.4", label: "CPI", sub: "GLA University" },
-    { value: "4", label: "Flagship builds", sub: "AI · ML · Automation" },
+    { value: "3", label: "Flagship builds", sub: "AI · ML · Automation" },
     { value: "13", label: "Certifications", sub: "& achievements" },
 ];
 

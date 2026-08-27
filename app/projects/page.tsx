@@ -183,12 +183,12 @@ export default function ProjectsPage() {
                     eyebrow="Selected work"
                     title="Systems built to"
                     accent="survive production"
-                    subtitle="Four builds that cover the range — an AI code-repair pipeline, a secured multi-tenant agent, a voice automation framework, and an end-to-end ML pipeline."
+                    subtitle="Three builds that cover the range — an AI code-repair pipeline, a secured multi-tenant agent, and an end-to-end ML pipeline."
                 />
 
                 {/* Contents */}
                 <Reveal>
-                    <div className="grid gap-px overflow-hidden rounded-2xl border border-white/[0.07] bg-white/[0.05] sm:grid-cols-2 lg:grid-cols-4">
+                    <div className="grid gap-px overflow-hidden rounded-2xl border border-white/[0.07] bg-white/[0.05] sm:grid-cols-3">
                         {ordered.map((p, i) => (
                             <div key={p.id} className="bg-ink px-6 py-5">
                                 <span className="font-mono text-[10px] text-fg-dim">

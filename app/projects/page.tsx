@@ -4,7 +4,7 @@ import { PROJECTS_DATA } from "@/lib/constants";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Reveal from "@/components/ui/Reveal";
 import SpotlightCard from "@/components/ui/SpotlightCard";
-import { FiZap } from "react-icons/fi";
+import { FiZap, FiGithub, FiArrowUpRight } from "react-icons/fi";
 
 type Project = (typeof PROJECTS_DATA)[number];
 
@@ -29,6 +29,13 @@ const ACCENTS = {
         soft: "bg-cyan/[0.07]",
         bar: "from-cyan via-cyan to-violet",
         dot: "bg-cyan",
+    },
+    rose: {
+        text: "text-rose",
+        border: "border-rose/25",
+        soft: "bg-rose/[0.07]",
+        bar: "from-rose via-rose to-gold",
+        dot: "bg-rose",
     },
 } as const;
 
@@ -73,6 +80,18 @@ function CaseStudy({ project, index }: { project: Project; index: number }) {
                         <p className="mt-5 max-w-2xl text-pretty text-base leading-relaxed text-fg-muted md:text-lg">
                             {project.tagline}
                         </p>
+                        {project.github && (
+                            <a
+                                href={project.github}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="link-wipe mt-5 inline-flex items-center gap-2 font-mono text-[13px] text-fg-muted transition-colors hover:text-gold"
+                            >
+                                <FiGithub size={14} />
+                                View source on GitHub
+                                <FiArrowUpRight size={13} />
+                            </a>
+                        )}
                     </Reveal>
 
                     {/* Metrics */}
@@ -164,12 +183,12 @@ export default function ProjectsPage() {
                     eyebrow="Selected work"
                     title="Systems built to"
                     accent="survive production"
-                    subtitle="Three builds that cover the range — a secured multi-tenant agent, a voice automation framework, and an end-to-end ML pipeline."
+                    subtitle="Four builds that cover the range — an AI code-repair pipeline, a secured multi-tenant agent, a voice automation framework, and an end-to-end ML pipeline."
                 />
 
                 {/* Contents */}
                 <Reveal>
-                    <div className="grid gap-px overflow-hidden rounded-2xl border border-white/[0.07] bg-white/[0.05] sm:grid-cols-3">
+                    <div className="grid gap-px overflow-hidden rounded-2xl border border-white/[0.07] bg-white/[0.05] sm:grid-cols-2 lg:grid-cols-4">
                         {ordered.map((p, i) => (
                             <div key={p.id} className="bg-ink px-6 py-5">
                                 <span className="font-mono text-[10px] text-fg-dim">

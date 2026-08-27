@@ -106,6 +106,45 @@ export const SKILLS_DATA = {
 
 export const PROJECTS_DATA = [
     {
+        id: "shinrai",
+        title: "Shinrai: AI-Powered Code Validation & Auto-Repair System",
+        shortTitle: "Shinrai",
+        tagline:
+            "Full-stack code reliability layer combining GPT-4o generation with 12 parallel validation checks and automatic repair.",
+
+        category: "LLM · Code Quality · DevOps",
+        accent: "rose" as const,
+        github: "https://github.com/pragyandhar/Shinrai---AI-Code-Reliability-Layer",
+
+        metrics: [
+            { value: "71%", label: "Detection accuracy" },
+            { value: "12", label: "Parallel checks" },
+            { value: "3", label: "Repair attempts" },
+        ],
+
+        tech: [
+            "Python",
+            "FastAPI",
+            "Celery",
+            "Redis",
+            "SQLite",
+            "GPT-4o",
+            "SQLAlchemy",
+        ],
+
+        highlights: [
+            "5 reliability checks (linting, type checking, hallucination detection, sandbox testing, control flow)",
+            "4 security checks (SAST, CVE scanning, secret detection, pattern analysis)",
+            "Weakest-link confidence aggregation with auto-repair loop",
+            "482ms average security scan time with graceful degradation",
+            "~10,000 lines of production Python with structured JSON logging",
+            "Unified diff generation and auto-generated markdown documentation",
+        ],
+
+        featured: true,
+    },
+
+    {
         id: "sentinel-nexus",
         title: "SentinelNexus: Multi-Tenant Enterprise AI Agent",
         shortTitle: "SentinelNexus",
@@ -114,6 +153,7 @@ export const PROJECTS_DATA = [
 
         category: "Agentic AI · Security",
         accent: "gold" as const,
+        github: undefined as string | undefined,
 
         // Figures below are pulled straight from the highlights — nothing new.
         metrics: [
@@ -150,6 +190,7 @@ export const PROJECTS_DATA = [
 
         category: "Automation · Voice Interface",
         accent: "violet" as const,
+        github: undefined as string | undefined,
 
         metrics: [
             { value: "40+", label: "Voice commands" },
@@ -185,6 +226,7 @@ export const PROJECTS_DATA = [
 
         category: "Machine Learning · MLOps",
         accent: "cyan" as const,
+        github: undefined as string | undefined,
 
         metrics: [
             { value: "7", label: "Ensemble models" },
@@ -285,7 +327,7 @@ export const EXTRA_DATA = [
 /** Headline figures for the hero. */
 export const HERO_STATS = [
     { value: "8.4", label: "CPI", sub: "GLA University" },
-    { value: "3", label: "Flagship builds", sub: "AI · ML · Automation" },
+    { value: "4", label: "Flagship builds", sub: "AI · ML · Automation" },
     { value: "13", label: "Certifications", sub: "& achievements" },
 ];
 

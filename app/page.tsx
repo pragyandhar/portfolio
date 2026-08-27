@@ -372,6 +372,7 @@ const accentMap = {
   gold: { text: "text-gold", ring: "hover:shadow-gold", bar: "from-gold-soft to-gold" },
   violet: { text: "text-iris", ring: "hover:shadow-violet", bar: "from-iris to-violet" },
   cyan: { text: "text-cyan", ring: "hover:shadow-neon", bar: "from-cyan to-violet" },
+  rose: { text: "text-rose", ring: "hover:shadow-rose", bar: "from-rose to-gold" },
 } as const;
 
 function SelectedWork() {

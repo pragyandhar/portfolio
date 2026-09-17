@@ -145,6 +145,46 @@ export const PROJECTS_DATA = [
     },
 
     {
+        id: "khoj",
+        title: "Khoj: Multi-Agent AI Research Assistant",
+        shortTitle: "Khoj",
+        tagline:
+            "LangGraph research assistant with human-in-the-loop approval, checkpointed state, and dual-verified citations.",
+
+        category: "Agentic AI · Multi-Agent Systems",
+        accent: "violet" as const,
+        github:
+            "https://github.com/pragyandhar/khoj---AI-Research-Assistant-with-Multi-Agent-Orchestration",
+
+        metrics: [
+            { value: "5", label: "Specialist agents" },
+            { value: "2x", label: "Citation verification" },
+            { value: "22", label: "Tests passing" },
+        ],
+
+        tech: [
+            "FastAPI",
+            "LangGraph",
+            "LangChain",
+            "PostgreSQL",
+            "Redis",
+            "ChromaDB",
+            "React",
+        ],
+
+        highlights: [
+            "Checkpointed, resumable LangGraph workflow with Postgres-backed time travel",
+            "Real human-in-the-loop gate via interrupt_before, survives a server restart",
+            "Independent citation subgraph verifying URL liveness and semantic relevance in parallel",
+            "RAG-backed research: checks a ChromaDB vector store before running a fresh web search",
+            "SSE streaming to the frontend via manual ReadableStream parsing",
+            "Structured logging with per-request correlation IDs across every layer",
+        ],
+
+        featured: true,
+    },
+
+    {
         id: "sentinel-nexus",
         title: "SentinelNexus: Multi-Tenant Enterprise AI Agent",
         shortTitle: "SentinelNexus",
@@ -291,7 +331,7 @@ export const EXTRA_DATA = [
 /** Headline figures for the hero. */
 export const HERO_STATS = [
     { value: "8.4", label: "CPI", sub: "GLA University" },
-    { value: "3", label: "Flagship builds", sub: "AI · ML · Automation" },
+    { value: "4", label: "Flagship builds", sub: "AI · ML · Automation" },
     { value: "13", label: "Certifications", sub: "& achievements" },
 ];
 
